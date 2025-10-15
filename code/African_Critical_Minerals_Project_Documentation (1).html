@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>African Critical Minerals Platform - Group 34</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(30, 41, 59, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+        }
+
+        h1 {
+            font-size: 3em;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 15px;
+            border-left: 4px solid #3b82f6;
+        }
+
+        h2 {
+            color: #60a5fa;
+            font-size: 2em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h3 {
+            color: #93c5fd;
+            font-size: 1.5em;
+            margin: 25px 0 15px 0;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+        }
+
+        .feature-card h4 {
+            color: #60a5fa;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+
+        .feature-card p {
+            color: #cbd5e1;
+            font-size: 0.95em;
+        }
+
+        .credentials-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: rgba(15, 23, 42, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .credentials-table th,
+        .credentials-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+
+        .credentials-table th {
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        .credentials-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .credentials-table code {
+            background: rgba(59, 130, 246, 0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            color: #93c5fd;
+        }
+
+        .url-box {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            text-align: center;
+            border: 2px solid rgba(59, 130, 246, 0.4);
+        }
+
+        .url-box a {
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .url-box a:hover {
+            color: #93c5fd;
+        }
+
+        .checklist {
+            list-style: none;
+            padding: 0;
+        }
+
+        .checklist li {
+            padding: 12px 15px;
+            margin: 10px 0;
+            background: rgba(34, 197, 94, 0.1);
+            border-left: 4px solid #22c55e;
+            border-radius: 5px;
+        }
+
+        .checklist li::before {
+            content: "✅ ";
+            margin-right: 10px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.2) 0%, rgba(59, 130, 246, 0.2) 100%);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 1px solid rgba(139, 92, 246, 0.4);
+        }
+
+        .icon {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+        }
+
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #60a5fa;
+            display: block;
+        }
+
+        .stat-card .label {
+            color: #94a3b8;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 30px;
+            border-top: 2px solid rgba(59, 130, 246, 0.3);
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 20px;
+            }
+
+            .feature-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏔️ African Critical Minerals Platform</h1>
+            <p class="subtitle">Strategic Intelligence Platform for African Mineral Resources</p>
+            <div class="badge">Group 34 | MINN2020A Project 2025</div>
+        </header>
+
+        <!-- Live Application Section -->
+        <div class="section">
+            <h2><span class="icon">🌐</span>Live Application</h2>
+            <div class="url-box">
+                <p style="margin-bottom: 10px; color: #94a3b8;">Production URL:</p>
+                <a href="https://y0h0i3c8og5x.manus.space" target="_blank">https://y0h0i3c8og5x.manus.space</a>
+            </div>
+
+            <h3>Login Credentials</h3>
+            <table class="credentials-table">
+                <thead>
+                    <tr>
+                        <th>Role</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Access Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Administrator</strong></td>
+                        <td><code>admin01</code></td>
+                        <td><code>hash123</code></td>
+                        <td>Full system access</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Investor</strong></td>
+                        <td><code>investor01</code></td>
+                        <td><code>hash456</code></td>
+                        <td>Financial data & analytics</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Researcher</strong></td>
+                        <td><code>research01</code></td>
+                        <td><code>hash789</code></td>
+                        <td>Data viewing & export</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- GUI Features Section -->
+        <div class="section">
+            <h2><span class="icon">🎨</span>Enhanced GUI Features</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🔐 Redesigned Login Page</h4>
+                    <p>Split-screen layout with animated floating background, feature highlights, and professional testimonial section</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📊 Animated Dashboard</h4>
+                    <p>Statistics cards with pulse effects, gradient accents, and smooth hover transformations</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🎭 Modern Theme</h4>
+                    <p>Professional dark theme with blue-to-purple gradients and glassmorphism effects</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📱 Responsive Design</h4>
+                    <p>Fully responsive interface that adapts beautifully to all screen sizes</p>
+                </div>
+                <div class="feature-card">
+                    <h4>✨ Smooth Animations</h4>
+                    <p>Fade-in effects, floating elements, and smooth transitions throughout</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🎯 Enhanced UX</h4>
+                    <p>Icon animations, focus effects, and professional typography</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Statistics -->
+        <div class="section">
+            <h2><span class="icon">📊</span>Project Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <span class="number">4</span>
+                    <span class="label">Critical Minerals</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">4</span>
+                    <span class="label">African Countries</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">4</span>
+                    <span class="label">Mining Sites</span>
+                </div>
+                <div class="stat-card">
+                    <span class="number">15+</span>
+                    <span class="label">API Endpoints</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Deliverables Section -->
+        <div class="section">
+            <h2><span class="icon">📦</span>Project Deliverables</h2>
+            
+            <h3>1. Enhanced Web Application (60 marks)</h3>
+            <ul class="checklist">
+                <li>Redesigned modern GUI with split-screen login</li>
+                <li>Animated backgrounds and smooth transitions</li>
+                <li>JWT authentication with role-based access control</li>
+                <li>Mineral database with 4 critical minerals</li>
+                <li>Country profiles for 4 African nations</li>
+                <li>Interactive geospatial mapping</li>
+                <li>Analytics dashboard with charts</li>
+                <li>RESTful API with 15+ endpoints</li>
+            </ul>
+
+            <h3>2. Presentation Video (15 marks)</h3>
+            <div class="highlight-box">
+                <h4>🎬 Professional Video with Male English Voiceover</h4>
+                <p><strong>Duration:</strong> 70.5 seconds (1:10)</p>
+                <p><strong>Quality:</strong> High-definition cinematic production</p>
+                <p><strong>Scenes:</strong> 5 professionally generated video clips</p>
+                <ul style="margin-top: 10px; margin-left: 20px;">
+                    <li>Intro - Title reveal with elegant animation</li>
+                    <li>Dashboard - Modern interface with animated data</li>
+                    <li>Minerals - Professional showcase of critical minerals</li>
+                    <li>Map - Holographic Africa map with glowing points</li>
+                    <li>Outro - Group 34 credits with professional branding</li>
+                </ul>
+            </div>
+
+            <h3>3. Python Code & Pseudocode for VS Code (5 marks)</h3>
+            <ul class="checklist">
+                <li>Complete pseudocodes for all 6 functions</li>
+                <li>Full Python backend code (7 files)</li>
+                <li>Professional formatting for VS Code</li>
+                <li>Well-commented and documented</li>
+                <li>Ready to copy-paste and implement</li>
+            </ul>
+
+            <h3>4. Flowcharts (5 marks)</h3>
+            <ul class="checklist">
+                <li>6 professional flowchart diagrams</li>
+                <li>High-quality PNG images</li>
+                <li>Clear visualization of all functions</li>
+            </ul>
+
+            <h3>5. LaTeX Report (15 marks)</h3>
+            <ul class="checklist">
+                <li>7-page academic-standard report</li>
+                <li>Includes Abstract, Introduction, Methodology, Results, Conclusion</li>
+                <li>Professional formatting with figures</li>
+            </ul>
+        </div>
+
+        <!-- Technical Stack Section -->
+        <div class="section">
+            <h2><span class="icon">🛠️</span>Technology Stack</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>Backend</h4>
+                    <p>Python Flask with JWT authentication and RESTful API design</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Frontend</h4>
+                    <p>React 18 + Vite with Tailwind CSS for modern styling</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Data Visualization</h4>
+                    <p>Recharts for analytics and Leaflet for interactive mapping</p>
+                </div>
+                <div class="feature-card">
+                    <h4>Deployment</h4>
+                    <p>Production deployment on permanent public URL</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Features Section -->
+        <div class="section">
+            <h2><span class="icon">🌟</span>Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🔒 Secure Authentication</h4>
+                    <p>JWT-based authentication with role-based access control for administrators, investors, and researchers</p>
+                </div>
+                <div class="feature-card">
+                    <h4>💎 Mineral Database</h4>
+                    <p>Comprehensive data on Cobalt, Lithium, Graphite, and Manganese with market prices and descriptions</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🌍 Country Profiles</h4>
+                    <p>Detailed profiles for DRC, South Africa, Mozambique, and Namibia with economic data</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🗺️ Interactive Map</h4>
+                    <p>Geospatial visualization of mining sites across Africa using Leaflet technology</p>
+                </div>
+                <div class="feature-card">
+                    <h4>📈 Analytics Dashboard</h4>
+                    <p>Production trends, export values, and market dynamics with interactive charts</p>
+                </div>
+                <div class="feature-card">
+                    <h4>🚀 RESTful API</h4>
+                    <p>15+ endpoints for minerals, countries, production data, and site information</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Submission Checklist -->
+        <div class="section">
+            <h2><span class="icon">✅</span>Submission Checklist</h2>
+            <ul class="checklist">
+                <li>Enhanced web application deployed and accessible</li>
+                <li>Presentation video with male English voiceover (70.5 seconds)</li>
+                <li>Python code and pseudocodes for VS Code (Word document)</li>
+                <li>6 professional flowchart images (PNG)</li>
+                <li>6 detailed pseudocode files (TXT)</li>
+                <li>LaTeX report compiled to PDF (7 pages)</li>
+                <li>All files organized and archived</li>
+                <li>Group 34 branding throughout</li>
+                <li>Documentation complete</li>
+                <li>Ready for submission</li>
+            </ul>
+        </div>
+
+        <footer>
+            <p><strong>Created by Group 34</strong></p>
+            <p>MINN2020A - Computer Programming for Mining</p>
+            <p>University of the Witwatersrand, Johannesburg</p>
+            <p style="margin-top: 20px; color: #60a5fa;">© 2025 African Critical Minerals Platform</p>
+        </footer>
+    </div>
+</body>
+</html>
+

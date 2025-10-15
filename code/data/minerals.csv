@@ -1,0 +1,6 @@
+﻿id,name,description,critical_uses,global_reserves_years
+1,Lithium,Battery metal,Electric vehicle batteries,70
+2,Cobalt,Hard metal,Aerospace alloys,60
+3,Graphite,Carbon mineral,Battery anodes,50
+4,Manganese,Steel alloy metal,Steel production,40
+5,Platinum,Catalytic metal,Automotive catalysts,30
