@@ -1,7 +1,5 @@
-# =============================================================================
-# VISUALIZATION & FRONTEND DEVELOPER
-# Member 3: Visualization & Frontend Templates
-# =============================================================================
+
+# Khutsiso Teffo: Visualization & Frontend Templates
 
 # HTML Templates for the application
 
