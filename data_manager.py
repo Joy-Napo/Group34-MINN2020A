@@ -1,12 +1,8 @@
 # =============================================================================
 # DATA ARCHITECT & BACKEND MANAGER
-# Member 2: Data Management & Business Logic
+# Member 2: Data Management
 # =============================================================================
 
-from datetime import datetime
-import json
-
-# Comprehensive mineral database
 MINERALS = [
     {
         "id": 1,
@@ -20,10 +16,7 @@ MINERALS = [
         "major_producers": ["DRC", "Russia", "Australia"],
         "demand_growth": "12% YoY",
         "applications": ["EV Batteries", "Aerospace", "Medical Devices"],
-        "risk_factors": ["Supply Chain", "Geopolitical", "Environmental"],
-        "discovery_year": 1735,
-        "chemical_symbol": "Co",
-        "density": "8.9 g/cm³"
+        "risk_factors": ["Supply Chain", "Geopolitical", "Environmental"]
     },
     {
         "id": 2,
@@ -37,10 +30,7 @@ MINERALS = [
         "major_producers": ["Australia", "Chile", "China"],
         "demand_growth": "18% YoY",
         "applications": ["EV Batteries", "Energy Storage", "Consumer Electronics"],
-        "risk_factors": ["Water Usage", "Price Volatility", "Processing"],
-        "discovery_year": 1817,
-        "chemical_symbol": "Li",
-        "density": "0.534 g/cm³"
+        "risk_factors": ["Water Usage", "Price Volatility", "Processing"]
     },
     {
         "id": 3,
@@ -54,10 +44,7 @@ MINERALS = [
         "major_producers": ["China", "Mozambique", "Brazil"],
         "demand_growth": "8% YoY",
         "applications": ["Anode Material", "Refractories", "Lubricants"],
-        "risk_factors": ["Chinese Dominance", "Processing Costs", "Quality Variance"],
-        "discovery_year": 1565,
-        "chemical_symbol": "C",
-        "density": "2.2 g/cm³"
+        "risk_factors": ["Chinese Dominance", "Processing Costs", "Quality Variance"]
     },
     {
         "id": 4,
@@ -71,14 +58,10 @@ MINERALS = [
         "major_producers": ["South Africa", "Australia", "Gabon"],
         "demand_growth": "6% YoY",
         "applications": ["Steel Production", "Batteries", "Fertilizers"],
-        "risk_factors": ["Steel Demand", "Logistics", "Infrastructure"],
-        "discovery_year": 1774,
-        "chemical_symbol": "Mn",
-        "density": "7.21 g/cm³"
+        "risk_factors": ["Steel Demand", "Logistics", "Infrastructure"]
     }
 ]
 
-# Enhanced country profiles
 COUNTRIES = [
     {
         "id": 1,
@@ -94,10 +77,7 @@ COUNTRIES = [
         "area": "2,344,858 km²",
         "mining_regulations": "Moderate",
         "infrastructure": "Developing",
-        "political_stability": "Medium Risk",
-        "currency": "Congolese Franc (CDF)",
-        "languages": ["French", "Lingala", "Kikongo"],
-        "mining_code": "Mining Code 2018"
+        "political_stability": "Medium Risk"
     },
     {
         "id": 2,
@@ -113,10 +93,7 @@ COUNTRIES = [
         "area": "1,221,037 km²",
         "mining_regulations": "Established",
         "infrastructure": "Developed",
-        "political_stability": "Medium Risk",
-        "currency": "South African Rand (ZAR)",
-        "languages": ["English", "Afrikaans", "Zulu"],
-        "mining_code": "Mining Charter 2018"
+        "political_stability": "Medium Risk"
     },
     {
         "id": 3,
@@ -132,10 +109,7 @@ COUNTRIES = [
         "area": "801,590 km²",
         "mining_regulations": "Developing",
         "infrastructure": "Basic",
-        "political_stability": "High Risk",
-        "currency": "Mozambican Metical (MZN)",
-        "languages": ["Portuguese", "Emakhuwa", "Xichangana"],
-        "mining_code": "Mining Law 2014"
+        "political_stability": "High Risk"
     },
     {
         "id": 4,
@@ -151,14 +125,10 @@ COUNTRIES = [
         "area": "825,615 km²",
         "mining_regulations": "Established",
         "infrastructure": "Good",
-        "political_stability": "Low Risk",
-        "currency": "Namibian Dollar (NAD)",
-        "languages": ["English", "Afrikaans", "Oshiwambo"],
-        "mining_code": "Minerals Act 1992"
+        "political_stability": "Low Risk"
     }
 ]
 
-# Comprehensive mining sites data
 MINING_SITES = [
     {
         "id": 1,
@@ -174,10 +144,7 @@ MINING_SITES = [
         "employment": "5,000",
         "year_established": 2009,
         "estimated_lifespan": "25 years",
-        "environmental_rating": "B",
-        "ownership": ["China Molybdenum (80%)", "Gécamines (20%)"],
-        "mining_method": "Open Pit",
-        "processing_capacity": "15,000 tpd"
+        "environmental_rating": "B"
     },
     {
         "id": 2,
@@ -193,10 +160,7 @@ MINING_SITES = [
         "employment": "8,000",
         "year_established": 1970,
         "estimated_lifespan": "40 years",
-        "environmental_rating": "A-",
-        "ownership": ["South32", "Assmang"],
-        "mining_method": "Underground & Open Pit",
-        "processing_capacity": "6 million tpa"
+        "environmental_rating": "A-"
     },
     {
         "id": 3,
@@ -212,10 +176,7 @@ MINING_SITES = [
         "employment": "1,200",
         "year_established": 2018,
         "estimated_lifespan": "50 years",
-        "environmental_rating": "B+",
-        "ownership": ["Syrah Resources (100%)"],
-        "mining_method": "Open Pit",
-        "processing_capacity": "350,000 tpa"
+        "environmental_rating": "B+"
     },
     {
         "id": 4,
@@ -231,14 +192,10 @@ MINING_SITES = [
         "employment": "800",
         "year_established": 1920,
         "estimated_lifespan": "30 years",
-        "environmental_rating": "A",
-        "ownership": ["Andrada Mining (100%)"],
-        "mining_method": "Open Pit",
-        "processing_capacity": "5,000 tpa"
+        "environmental_rating": "A"
     }
 ]
 
-# Market intelligence data
 MARKET_INTELLIGENCE = {
     "price_trends": [
         {"mineral": "Cobalt", "current_price": 52000, "change_percentage": 5.2, "trend": "up"},
@@ -251,33 +208,23 @@ MARKET_INTELLIGENCE = {
             "title": "DRC Announces New Mining Regulations",
             "summary": "New environmental standards expected to impact cobalt production",
             "date": "2024-01-15",
-            "impact": "medium",
-            "category": "Regulatory"
+            "impact": "medium"
         },
         {
             "title": "Electric Vehicle Demand Drives Lithium Prices",
             "summary": "Global EV sales growth continues to fuel lithium demand",
             "date": "2024-01-12",
-            "impact": "high",
-            "category": "Market"
+            "impact": "high"
         },
         {
             "title": "Mozambique Infrastructure Improvements",
             "summary": "New port facilities to boost graphite export capacity",
             "date": "2024-01-10",
-            "impact": "low",
-            "category": "Infrastructure"
+            "impact": "low"
         }
-    ],
-    "supply_chain_analysis": {
-        "cobalt": {"bottlenecks": ["DRC supply chain", "Refining capacity"], "outlook": "Tight"},
-        "lithium": {"bottlenecks": ["Processing technology", "Water access"], "outlook": "Improving"},
-        "graphite": {"bottlenecks": ["Chinese dominance", "Quality control"], "outlook": "Stable"},
-        "manganese": {"bottlenecks": ["Logistics", "Infrastructure"], "outlook": "Good"}
-    }
+    ]
 }
 
-# Investment opportunities database
 INVESTMENT_OPPORTUNITIES = [
     {
         "id": 1,
@@ -288,11 +235,7 @@ INVESTMENT_OPPORTUNITIES = [
         "estimated_roi": "22%",
         "risk_level": "Medium",
         "timeline": "3-5 years",
-        "status": "Feasibility",
-        "project_stage": "Exploration",
-        "resource_estimate": "15Mt @ 1.2% Li2O",
-        "infrastructure": "Good",
-        "regulatory_approval": "Pending"
+        "status": "Feasibility"
     },
     {
         "id": 2,
@@ -303,11 +246,7 @@ INVESTMENT_OPPORTUNITIES = [
         "estimated_roi": "18%",
         "risk_level": "High",
         "timeline": "2-3 years",
-        "status": "Planning",
-        "project_stage": "Development",
-        "resource_estimate": "N/A",
-        "infrastructure": "Basic",
-        "regulatory_approval": "Approved"
+        "status": "Planning"
     },
     {
         "id": 3,
@@ -318,138 +257,64 @@ INVESTMENT_OPPORTUNITIES = [
         "estimated_roi": "15%",
         "risk_level": "Low",
         "timeline": "1-2 years",
-        "status": "Approved",
-        "project_stage": "Expansion",
-        "resource_estimate": "50Mt @ 6% Cg",
-        "infrastructure": "Developing",
-        "regulatory_approval": "Granted"
+        "status": "Approved"
     }
 ]
 
-class DataManager:
-    """Comprehensive data management class for the minerals platform"""
-    
-    def __init__(self):
-        self.minerals = MINERALS
-        self.countries = COUNTRIES
-        self.mining_sites = MINING_SITES
-        self.market_intelligence = MARKET_INTELLIGENCE
-        self.investment_opportunities = INVESTMENT_OPPORTUNITIES
-    
-    def get_mineral_by_id(self, mineral_id):
-        """Get specific mineral by ID"""
-        return next((m for m in self.minerals if m['id'] == mineral_id), None)
-    
-    def get_country_by_id(self, country_id):
-        """Get specific country by ID"""
-        return next((c for c in self.countries if c['id'] == country_id), None)
-    
-    def get_mining_site_by_id(self, site_id):
-        """Get specific mining site by ID"""
-        return next((s for s in self.mining_sites if s['id'] == site_id), None)
-    
-    def search_minerals(self, query):
-        """Search minerals by name, description, or applications"""
-        query = query.lower()
-        results = []
-        for mineral in self.minerals:
-            if (query in mineral['name'].lower() or 
-                query in mineral['description'].lower() or
-                any(query in app.lower() for app in mineral['applications'])):
-                results.append(mineral)
-        return results
-    
-    def get_countries_by_mineral(self, mineral_name):
-        """Get countries that produce a specific mineral"""
-        mineral_name = mineral_name.lower()
-        producing_countries = []
-        
-        for country in self.countries:
-            if any(mineral_name in mineral.lower() for mineral in country['key_minerals']):
-                producing_countries.append(country)
-        
-        return producing_countries
-    
-    def get_sites_by_mineral(self, mineral_name):
-        """Get mining sites for a specific mineral"""
-        mineral_name = mineral_name.lower()
-        return [site for site in self.mining_sites if site['mineral'].lower() == mineral_name]
-    
-    def get_sites_by_country(self, country_name):
-        """Get mining sites in a specific country"""
-        country_name = country_name.lower()
-        return [site for site in self.mining_sites if site['country'].lower() == country_name]
-    
-    def get_market_trends(self, mineral_name=None):
-        """Get market trends, optionally filtered by mineral"""
-        trends = self.market_intelligence['price_trends']
-        if mineral_name:
-            mineral_name = mineral_name.lower()
-            return [trend for trend in trends if trend['mineral'].lower() == mineral_name]
-        return trends
-    
-    def get_investment_opportunities_by_risk(self, risk_level=None):
-        """Get investment opportunities, optionally filtered by risk level"""
-        if risk_level:
-            risk_level = risk_level.lower()
-            return [opp for opp in self.investment_opportunities if opp['risk_level'].lower() == risk_level]
-        return self.investment_opportunities
-    
-    def get_platform_statistics(self):
-        """Get comprehensive platform statistics"""
-        return {
-            "total_minerals": len(self.minerals),
-            "total_countries": len(self.countries),
-            "total_mining_sites": len(self.mining_sites),
-            "total_investment_opportunities": len(self.investment_opportunities),
-            "market_news_count": len(self.market_intelligence['market_news']),
-            "data_last_updated": datetime.now().isoformat()
-        }
-    
-    def export_data(self, data_type, format='json'):
-        """Export data in specified format"""
-        data_map = {
-            'minerals': self.minerals,
-            'countries': self.countries,
-            'mining_sites': self.mining_sites,
-            'market_intelligence': self.market_intelligence,
-            'investment_opportunities': self.investment_opportunities
-        }
-        
-        data = data_map.get(data_type)
-        if not data:
-            return None
-            
-        if format == 'json':
-            return json.dumps(data, indent=2)
-        # Could add CSV, Excel formats here
-        
-        return None
-
-# Global data manager instance
-data_manager = DataManager()
-
-# Convenience functions for easy access
 def load_mineral_data():
-    return data_manager.minerals
+    """Load all mineral data"""
+    return MINERALS
 
-def get_all_countries():
-    return data_manager.countries
+def get_country_profile(country_name):
+    """Get specific country profile"""
+    for country in COUNTRIES:
+        if country['name'].lower() == country_name.lower():
+            return country
+    return None
 
-def get_all_mining_sites():
-    return data_manager.mining_sites
+def get_production_trends(mineral=None, country=None):
+    """Get production trends with optional filters"""
+    trends = []
+    for site in MINING_SITES:
+        if (mineral is None or site['mineral'].lower() == mineral.lower()) and \
+           (country is None or site['country'].lower() == country.lower()):
+            trends.append(site)
+    return trends
 
-def get_market_intelligence():
-    return data_manager.market_intelligence
-
-def get_investment_opportunities():
-    return data_manager.investment_opportunities
-
-def get_platform_stats():
-    return data_manager.get_platform_statistics()
+def get_all_minerals():
+    """Get all minerals"""
+    return MINERALS
 
 def search_minerals(query):
-    return data_manager.search_minerals(query)
+    """Search minerals by name or description"""
+    results = []
+    for mineral in MINERALS:
+        if query.lower() in mineral['name'].lower() or query.lower() in mineral['description'].lower():
+            results.append(mineral)
+    return results
 
-def get_countries_by_mineral(mineral_name):
-    return data_manager.get_countries_by_mineral(mineral_name)
+def get_all_countries():
+    """Get all countries"""
+    return COUNTRIES
+
+def get_all_mining_sites():
+    """Get all mining sites"""
+    return MINING_SITES
+
+def get_market_intelligence():
+    """Get market intelligence data"""
+    return MARKET_INTELLIGENCE
+
+def get_investment_opportunities():
+    """Get investment opportunities"""
+    return INVESTMENT_OPPORTUNITIES
+
+def get_platform_stats():
+    """Get platform statistics"""
+    return {
+        "minerals_count": len(MINERALS),
+        "countries_count": len(COUNTRIES),
+        "mining_sites_count": len(MINING_SITES),
+        "market_news_count": len(MARKET_INTELLIGENCE['market_news']),
+        "investment_opportunities_count": len(INVESTMENT_OPPORTUNITIES)
+    }
