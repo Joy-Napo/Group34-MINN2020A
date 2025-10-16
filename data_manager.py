@@ -1,6 +1,6 @@
 # =============================================================================
 # DATA ARCHITECT & BACKEND MANAGER
-# Member 2: Data Management
+# MRMODEPEKHALEMO: Data Management
 # =============================================================================
 
 MINERALS = [
