@@ -1,7 +1,4 @@
-# =============================================================================
-# APPLICATION INTEGRATOR & PROJECT MANAGER
 # Napo Joy  Serobele: Application Integration & Project Management
-# =============================================================================
 
 from flask import Flask, render_template_string, request, redirect, url_for, session, jsonify, send_from_directory
 import os
@@ -26,18 +23,18 @@ from visualization_manager import (
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  # Secure secret key for session management
 
-# =============================================================================
+
 # STATIC FILE HANDLING
-# =============================================================================
+
 
 @app.route('/static/<path:filename>')
 def serve_static(filename):
     """Serve static files (CSS, JS, images) from static directory"""
     return send_from_directory('static', filename)
 
-# =============================================================================
+
 # CORE APPLICATION ROUTES
-# =============================================================================
+
 
 @app.route('/')
 def index():
@@ -110,9 +107,9 @@ def admin_panel():
         user_data=user_data
     )
 
-# =============================================================================
+
 # RESTful API ENDPOINTS
-# =============================================================================
+
 
 @app.route('/api/minerals')
 @login_required
@@ -256,9 +253,9 @@ def api_user_activity():
         "timestamp": datetime.now().isoformat()
     })
 
-# =============================================================================
+
 # ERROR HANDLERS
-# =============================================================================
+
 
 @app.errorhandler(404)
 def not_found_error(error):
@@ -287,9 +284,8 @@ def forbidden_error(error):
         "timestamp": datetime.now().isoformat()
     }), 403
 
-# =============================================================================
+
 # APPLICATION STARTUP AND MANAGEMENT
-# =============================================================================
 
 class ApplicationManager:
     """Manager for application startup and configuration"""
@@ -358,9 +354,8 @@ class ApplicationManager:
 # Create application manager instance
 app_manager = ApplicationManager(app)
 
-# =============================================================================
+
 # MAIN EXECUTION BLOCK
-# =============================================================================
 
 if __name__ == '__main__':
     """Application entry point - starts the Flask development server"""
