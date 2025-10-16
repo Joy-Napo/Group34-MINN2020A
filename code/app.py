@@ -1,14 +1,6 @@
  # app.py - African Critical Minerals Platform with Enhanced Features
 # Group 34 | MINN2020A Project 2025
 
-"""
-MAIN APPLICATION FILE
-----------------------
-A comprehensive Flask web application for African critical minerals data.
-Features include user authentication, interactive data visualization, 
-market intelligence, and RESTful APIs.
-"""
-
 from flask import Flask, render_template_string, request, redirect, url_for, session, jsonify, send_from_directory
 from functools import wraps
 import os
@@ -291,9 +283,9 @@ USERS = {
     "research01": {"password": "hash789", "role": "researcher", "name": "Research Specialist", "last_login": None}
 }
 
-# =============================================================================
+
 # AUTHENTICATION & AUTHORIZATION SYSTEM
-# =============================================================================
+
 
 def login_required(f):
     """Decorator to ensure user is logged in before accessing protected routes"""
