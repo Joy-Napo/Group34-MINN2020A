@@ -317,4 +317,4 @@ def get_platform_stats():
         "mining_sites_count": len(MINING_SITES),
         "market_news_count": len(MARKET_INTELLIGENCE['market_news']),
         "investment_opportunities_count": len(INVESTMENT_OPPORTUNITIES)
-    }
+  }
