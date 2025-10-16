@@ -16,16 +16,16 @@ import json
 from datetime import datetime, timedelta
 import random
 
-# =============================================================================
+
 # FLASK APPLICATION INITIALISATION
-# =============================================================================
+
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  # Secure secret key for session management
 
-# =============================================================================
+
 # DATABASE
-# =============================================================================
+
 
 MINERALS = [
     {
@@ -328,18 +328,18 @@ def track_activity(activity_description):
         })
         session['user_activity'] = user_activity[-10:]
 
-# =============================================================================
+
 # STATIC FILE HANDLING
-# =============================================================================
+
 
 @app.route('/static/<path:filename>')
 def serve_static(filename):
     """Serve static files (CSS, JS, images) from static directory"""
     return send_from_directory('static', filename)
 
-# =============================================================================
+
 # HTML TEMPLATES 
-# =============================================================================
+
 
 INDEX_HTML = '''
 <!DOCTYPE html>
@@ -2222,9 +2222,8 @@ ADMIN_HTML = '''
 </html>
 '''
 
-# =============================================================================
 # CORE APPLICATION ROUTES
-# =============================================================================
+
 
 @app.route('/')
 def index():
@@ -2299,9 +2298,9 @@ def admin_panel():
         user_data=user_data
     )
 
-# =============================================================================
+]
 # RESTful API ENDPOINTS
-# =============================================================================
+
 
 @app.route('/api/minerals')
 @login_required
@@ -2424,9 +2423,9 @@ def api_user_activity():
         "timestamp": datetime.now().isoformat()
     })
 
-# =============================================================================
+
 # APPLICATION STARTUP
-# =============================================================================
+
 
 if __name__ == '__main__':
     """Application entry point - starts the Flask development server"""
