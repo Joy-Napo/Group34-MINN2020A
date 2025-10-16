@@ -17,14 +17,14 @@ from datetime import datetime, timedelta
 import random
 
 # =============================================================================
-# FLASK APPLICATION INITIALIZATION
+# FLASK APPLICATION INITIALISATION
 # =============================================================================
 
 app = Flask(__name__)
 app.secret_key = os.urandom(24)  # Secure secret key for session management
 
 # =============================================================================
-# COMPREHENSIVE MOCK DATABASE
+# DATABASE
 # =============================================================================
 
 MINERALS = [
@@ -338,7 +338,7 @@ def serve_static(filename):
     return send_from_directory('static', filename)
 
 # =============================================================================
-# HTML TEMPLATES (Complete templates restored)
+# HTML TEMPLATES 
 # =============================================================================
 
 INDEX_HTML = '''
