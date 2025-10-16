@@ -1,6 +1,6 @@
 # =============================================================================
 # AUTHENTICATION & SECURITY MANAGER
-# Member 1: Authentication & Security System
+# Thatoyaone: Authentication & Security System
 # =============================================================================
 
 from flask import session, redirect, url_for
