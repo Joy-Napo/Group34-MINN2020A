@@ -1,7 +1,5 @@
-# =============================================================================
-# AUTHENTICATION & SECURITY MANAGER
 # Thatoyaone: Authentication & Security System
-# =============================================================================
+
 
 from flask import session, redirect, url_for
 from functools import wraps
